@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/brands.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/solid.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div></div>
+      </header>
+      <main class="container">
+        <section>
+          <div class="row justify-content-md-center">
+            <div class="col"></div>
+            <div class="col-4">
+              <div class="naver">
+                <a href="./register.html"></a>
+              </div>
+              <form class="resrter__form">
+                <div class="form__div">
+                  <label for="inputEmail1" class="form-label">아이디</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail1"
+                    placeholder="@naver.com"
+                  />
+                </div>
+                <div class="form__div">
+                  <label for="inputPassword1" class="form-label"
+                    >비밀번호</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputPassword1"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form__div">
+                  <label for="inputPassword2" class="form-label"
+                    >비밀번호 재확인</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputPassword2"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form__div form__name">
+                  <label for="Name1" class="form-label">이름</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="Name1"
+                    placeholder=""
+                    maxlength="5"
+                  />
+                </div>
+                <!-- 생년월일 -->
+                <div class="row g-3">
+                  <div class="col-md">
+                    <div class="form-label">
+                      <label for="Year1" class="form-label">생년월일</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="Year1"
+                        placeholder="년(4자)"
+                        maxlength="4"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-label">
+                      <label for="Month1" class="form-label">&nbsp;</label>
+                      <select class="form-select" id="Month1">
+                        <option selected>월</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md">
+                    <div class="form-label">
+                      <label for="Day1" class="form-label">&nbsp;</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="Day1"
+                        placeholder="일"
+                        maxlength="2"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- 생년월일 -->
+                <!-- 성별 -->
+                <div class="row mb-3">
+                  <label for="inputEmail4" class="form-label">성별</label>
+                  <div class="col-sm-12">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="gender"
+                    >
+                      <option selected disabled>성별</option>
+                      <option value="man">남자</option>
+                      <option value="woman">여자</option>
+                      <option value="nogender">선택안함</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- 성별 -->
+                <!-- 본인확인이메일 -->
+                <div class="form__div">
+                  <label for="inputEmail4" class="form-label"
+                    >본인 확인 이메일
+                    <span style="font-size: 12px; color: gray"
+                      >(선택)</span
+                    ></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail4"
+                    placeholder=""
+                  />
+                </div>
+                <!-- 본인확인이메일 -->
+                <!-- 휴대전화 -->
+                <div class="row mb-3">
+                  <label for="number1" class="form-label">휴대전화</label>
+                  <div class="col-sm-12">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="number"
+                    >
+                      <option selected>대한민국 +82</option>
+                      <option value="man">그리스 +30</option>
+                    </select>
+                    <div class="row">
+                      <div class="col-8">
+                        <input
+                          type="email"
+                          class="form-control Number1"
+                          id="Number1"
+                          placeholder="전화번호 입력"
+                        />
+                      </div>
+                      <div class="col">
+                        <button
+                          class="btn btn-primary numberpush"
+                          type="button"
+                        >
+                          <span>인증번호 받기</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 휴대전화 -->
+                <!-- 가입하기 -->
+                <div class="d-grid gap-2 form__div">
+                  <button class="btn btn-primary register" type="button">
+                    가입하기
+                  </button>
+                </div>
+                <!-- 가입하기 -->
+              </form>
+            </div>
+            <div class="col"></div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div></div>
+        <div></div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/register.js"></script>
+  </body>
+</html>

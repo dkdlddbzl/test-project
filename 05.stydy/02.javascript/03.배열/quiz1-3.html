@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var grade = Number(prompt('학년을 입력하세요','0~6'));
+        var score = Number(prompt('점수을 입력하세요','0~100'));
+        var msg = '에러입니다.'
+
+        if (grade == 4) {
+            if ( score >= 70) {
+                console.log('합격입니다.');
+            } else {
+                console.log('불합격입니다.');
+            }
+        } else {
+            if ( score >= 60){
+                console.log('합격입니다.');
+            } else {
+                console.log('불합격입니다.');
+        }
+    }   if (0 > score < 100) {
+        alert(msg) ;
+    }
+
+
+
+    </script>
+</body>
+</html>

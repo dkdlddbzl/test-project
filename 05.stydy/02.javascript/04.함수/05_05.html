@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var num = 1; // 전역 변수: 자바스크립트 어디서든지 가져다가 사용가능
+
+        function love() {
+            var a = num+1; //a 지역변수 => 스코프 안에서만 사용 가능
+            console.log(`a: ${a}`);
+        }
+
+        love();
+        
+
+        function func(array) {
+            let output = array[0];
+            for (const item of array) {
+                if(output < item) {
+                    output = item;
+                }
+            } 
+            return output;
+        }
+
+        const testarray=[1, 2, 5, 13]
+        console.log(`${testarray}에서`)
+        console.log(`최대값은 ${func(testarray)}`)
+
+
+
+        function func(array) {
+            let output = array[0];
+            for (let item of array) {
+                if (output < item) {
+                    output = item;
+                }
+            }
+            return output;
+        }
+        const testarray2 = [3, 2, 21, 41]
+        console.log(`${testarray2}에서 `)
+        console.log(`최대 값은 ${func(testarray2)}`) 
+    </script>
+</body>
+</html>

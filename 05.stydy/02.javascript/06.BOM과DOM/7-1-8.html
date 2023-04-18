@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first"></div>
+    <script>
+        //태그 생성하기 생성하고 싶은 태그 이름
+        const header = document.createElement('h1');
+        const div = document.createElement('div');
+
+        console.log(div);
+        
+        header.textContent = '문서 객체 생성하기';
+        div.textContent = 'div 생성하기'
+        console.log(header);
+        //생성한 태그 body안에 넣기
+        //body아래에 자식 태그로 넣어준다
+        document.body.appendChild(header);
+        document.body.appendChild(div);
+
+        const header2 = document.createElement('h1');
+        const first = document.querySelector('#first');
+        console.log(header2);
+        console.log(first);
+        
+        header2.textContent = ' 123 ';
+
+        //div 태그안에 자식태그로 넣기
+        first.appendChild(header2);
+
+    </script>
+</body>
+</html>

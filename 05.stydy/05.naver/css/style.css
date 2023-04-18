@@ -9,25 +9,19 @@ header {
 }
 
 .naver {
-  text-align: center;
-  padding: 20px;
   background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
   background-repeat: no-repeat;
   background-size: 240px auto;
   height: 44px;
-  margin: 0 auto;
+  cursor: pointer;
   background-position: 0 0;
 }
 
-.naver h2 {
+/* .naver h2 {
   font-size: 60px;
   font-weight: bold !important;
   color: rgb(5, 174, 36);
-}
-
-.naver a {
-  text-decoration: none;
-}
+} */
 
 .form-label {
   font-size: 14px;

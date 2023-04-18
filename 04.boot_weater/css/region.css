@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+main {
+  margin-top: 56px;
+}
+
+main > section {
+  padding: 40px 0;
+}
+
+.section__1 {
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.section__2 {
+  text-align: right;
+}
+
+.section__3 {
+  border-bottom: 1px solid white;
+}

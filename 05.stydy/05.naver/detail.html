@@ -7,13 +7,23 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="images"></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script>
-      const movieURL =
-        "https://api.themoviedb.org/3/movie/popular?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR&page=1&region=KR";
+      // 1. 전체 url 가져오기
+      const currentURL = location.href;
+      console.log(currentURL);
+
+      //2. 쿼리 스트링 파라매터 가져오기
+      const urlObj = new URL(currentURL);
+      const params = urlObj.searchParams; //파라미터에 대한정보가 들어있다
+
+      //파라미터의 값을 구한다 params.get('변수명')
+      const id = params.get("id");
+
+      console.log(id);
+
+      const movieURL = `https://api.themoviedb.org/3/tv/${id}?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR`;
       $.ajax({
         type: "GET",
         url: movieURL,

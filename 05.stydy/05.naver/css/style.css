@@ -5,23 +5,25 @@
 }
 
 header {
-  height: 20px;
+  height: 100px;
+  padding-top: 40px;
 }
 
-.naver {
+.naver h2 {
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  height: 44px;
   background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
   background-repeat: no-repeat;
-  background-size: 240px auto;
-  height: 44px;
-  cursor: pointer;
   background-position: 0 0;
+  background-size: 240px auto;
+  color: transparent;
+  font-size: 0;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
 }
-
-/* .naver h2 {
-  font-size: 60px;
-  font-weight: bold !important;
-  color: rgb(5, 174, 36);
-} */
 
 .form-label {
   font-size: 14px;
@@ -58,6 +60,9 @@ header {
   margin: 10px 0 10px 0;
 }
 
+.Number1 {
+  margin: 10px 0 10px 0;
+}
 .numberpush {
   margin: 10px 0 10px 0;
   height: 50px;
@@ -68,4 +73,5 @@ header {
 .numberpush span {
   font-size: 14px;
 }
+
 /* 푸터 */

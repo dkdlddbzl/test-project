@@ -31,16 +31,21 @@
   <body>
     <div class="wrap">
       <header>
-        <div></div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-4 naver">
+            <h2>
+              <a href="#"></a>
+            </h2>
+          </div>
+          <div class="col"></div>
+        </div>
       </header>
       <main class="container">
         <section>
           <div class="row justify-content-md-center">
             <div class="col"></div>
             <div class="col-4">
-              <div class="naver">
-                <a class="naver_logo" href="./register.html"></a>
-              </div>
               <form class="resrter__form">
                 <div class="form__div">
                   <label for="inputEmail1" class="form-label">아이디</label>
@@ -101,7 +106,7 @@
                     <div class="form-label">
                       <label for="Month1" class="form-label">&nbsp;</label>
                       <select class="form-select" id="Month1">
-                        <option selected>월</option>
+                        <option selected disabled>월</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -194,8 +199,16 @@
                         </button>
                       </div>
                     </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="인증번호 입력하세요"
+                      aria-label="Disabled input example"
+                      disabled
+                    />
                   </div>
                 </div>
+
                 <!-- 휴대전화 -->
                 <!-- 가입하기 -->
                 <div class="d-grid gap-2 form__div">

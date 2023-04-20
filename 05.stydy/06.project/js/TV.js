@@ -20,6 +20,16 @@ const popularTv2 =
 const popularTv3 =
   "https://api.themoviedb.org/3/tv/216304?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR";
 
+const airTv1 =
+  "https://api.themoviedb.org/3/tv/211796?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR";
+const airTv2 =
+  "https://api.themoviedb.org/3/tv/210586?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR";
+const airTv3 =
+  "https://api.themoviedb.org/3/tv/221707-2?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR";
+
+const main1 =
+  "https://api.themoviedb.org/3/tv/112888?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR";
+
 $.ajax({
   type: "GET",
   url: topRated,
@@ -72,31 +82,153 @@ $.ajax({
   },
 });
 
-function bringHighNumberToFront(arr) {
-  var max = arr[0]; // 배열의 첫 번째 원소를 초기 최대값으로 설정
-  var maxIndex = 0; // 초기 최대값의 인덱스를 0으로 설정
+$.ajax({
+  type: "GET",
+  url: popularTv2,
+  dataType: "json",
+  async: false, // 결과 데이터를 리턴시키기 위해 동기 방식으로 변경
+  success: function (data) {
+    //정상 응답시 처리 작업
+    console.log(data);
+    $(`.card_h_1`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_hot_1`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
+  },
+  error: function (request, status, error) {
+    //응답 에러시 처리 작업
+    console.log("code:" + request.status);
+    console.log("message:" + request.responseText);
+    console.log("error:" + error);
+  },
+});
 
-  // 배열을 순회하면서 최대값을 찾음
-  for (var i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-      maxIndex = i;
-    }
-  }
+$.ajax({
+  type: "GET",
+  url: popularTv3,
+  dataType: "json",
+  async: false, // 결과 데이터를 리턴시키기 위해 동기 방식으로 변경
+  success: function (data) {
+    //정상 응답시 처리 작업
+    console.log(data);
+    $(`.card_h_2`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_hot_2`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
+  },
+  error: function (request, status, error) {
+    //응답 에러시 처리 작업
+    console.log("code:" + request.status);
+    console.log("message:" + request.responseText);
+    console.log("error:" + error);
+  },
+});
 
-  // 최대값을 배열의 첫 번째 원소와 교환
-  var temp = arr[0];
-  arr[0] = max;
-  arr[maxIndex] = temp;
+$.ajax({
+  type: "GET",
+  url: airTv1,
+  dataType: "json",
+  async: false, // 결과 데이터를 리턴시키기 위해 동기 방식으로 변경
+  success: function (data) {
+    //정상 응답시 처리 작업
+    console.log(data);
+    $(`.card_a_0`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_air_0`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
+  },
+  error: function (request, status, error) {
+    //응답 에러시 처리 작업
+    console.log("code:" + request.status);
+    console.log("message:" + request.responseText);
+    console.log("error:" + error);
+  },
+});
 
-  return arr;
+$.ajax({
+  type: "GET",
+  url: airTv2,
+  dataType: "json",
+  async: false, // 결과 데이터를 리턴시키기 위해 동기 방식으로 변경
+  success: function (data) {
+    //정상 응답시 처리 작업
+    console.log(data);
+    $(`.card_a_1`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_air_1`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
+  },
+  error: function (request, status, error) {
+    //응답 에러시 처리 작업
+    console.log("code:" + request.status);
+    console.log("message:" + request.responseText);
+    console.log("error:" + error);
+  },
+});
+
+$.ajax({
+  type: "GET",
+  url: airTv3,
+  dataType: "json",
+  async: false, // 결과 데이터를 리턴시키기 위해 동기 방식으로 변경
+  success: function (data) {
+    //정상 응답시 처리 작업
+    console.log(data);
+    $(`.card_a_2`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_air_2`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
+  },
+  error: function (request, status, error) {
+    //응답 에러시 처리 작업
+    console.log("code:" + request.status);
+    console.log("message:" + request.responseText);
+    console.log("error:" + error);
+  },
+});
+
+$.ajax({
+  type: "GET",
+  url: main1,
+  dataType: "json",
+  async: false, // 결과 데이터를 리턴시키기 위해 동기 방식으로 변경
+  success: function (data) {
+    //정상 응답시 처리 작업
+    console.log(data);
+    $(`.card_a_3`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_air_3`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
+  },
+  error: function (request, status, error) {
+    //응답 에러시 처리 작업
+    console.log("code:" + request.status);
+    console.log("message:" + request.responseText);
+    console.log("error:" + error);
+  },
+});
+
+// 이미지 클릭
+
+function toggleImageZoom(event) {
+  var image = event.target;
+  image.classList.toggle("zoomed-in");
 }
 
-// 예시 배열
-var arr = [216390, 99966, 216304];
-console.log("원래 배열: " + arr);
-arr = bringHighNumberToFront(arr);
-console.log("변경된 배열: " + arr);
+// 이미지를 감싸고 있는 div 요소들을 찾아서 이벤트 리스너를 등록
+var imageContainers = document.getElementsByClassName(".card_img__0");
+for (var i = 0; i < imageContainers.length; i++) {
+  imageContainers[i].addEventListener("click", toggleImageZoom);
+}
+
+//이미지 클릭 팝업
+
 // 인기드라마 1
 
 // //if 문

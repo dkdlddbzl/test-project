@@ -1,3 +1,7 @@
+// (function() {
+
+// });
+
 const movieURL =
   "https://api.themoviedb.org/3/movie/popular?api_key=3bb6bc8ef217fa691d88c726f34cd910&language=ko-KR&page=1&region=KR";
 
@@ -55,6 +59,10 @@ $.ajax({
     //정상 응답시 처리 작업
     console.log(data);
     $(`.card_h_0`).text(`${data.overview}`);
+    let imgURL = "https://image.tmdb.org/t/p/w500" + data.poster_path;
+    $(`.card_hot_0`).append(
+      `<a href='./detail.html?id=${data.id}'><img src=${imgURL}></a>`
+    );
   },
   error: function (request, status, error) {
     //응답 에러시 처리 작업
@@ -63,6 +71,32 @@ $.ajax({
     console.log("error:" + error);
   },
 });
+
+function bringHighNumberToFront(arr) {
+  var max = arr[0]; // 배열의 첫 번째 원소를 초기 최대값으로 설정
+  var maxIndex = 0; // 초기 최대값의 인덱스를 0으로 설정
+
+  // 배열을 순회하면서 최대값을 찾음
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+      maxIndex = i;
+    }
+  }
+
+  // 최대값을 배열의 첫 번째 원소와 교환
+  var temp = arr[0];
+  arr[0] = max;
+  arr[maxIndex] = temp;
+
+  return arr;
+}
+
+// 예시 배열
+var arr = [216390, 99966, 216304];
+console.log("원래 배열: " + arr);
+arr = bringHighNumberToFront(arr);
+console.log("변경된 배열: " + arr);
 // 인기드라마 1
 
 // //if 문

@@ -108,6 +108,7 @@ p {
   word-break: break-all;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  color: white;
 }
 .card_img img {
   height: 300px;
@@ -116,11 +117,23 @@ p {
 }
 
 h2 {
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 17px;
+  font-weight: bold;
   padding-top: 20px;
+  color: white;
 }
 
 .album {
   padding: 0 !important;
+  background-color: #181818 !important;
+  padding-bottom: 20px !important;
+}
+
+.shadow-sm {
+  border: 1px solid #181818 !important;
+  background-color: #181818;
+  /* box-shadow: 1px 1px 3px 1px #1d0a1b !important; */
+}
+
+card-body {
 }
